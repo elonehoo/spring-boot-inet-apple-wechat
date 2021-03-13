@@ -1,0 +1,185 @@
+2021-03-12 21:44:12.011  INFO 29687 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29687 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:44:12.030 DEBUG 29687 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:44:12.034  INFO 29687 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:44:20.570  INFO 29687 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 9.264 seconds (JVM running for 11.988)
+2021-03-12 21:44:22.418 DEBUG 29687 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==>  Preparing: SELECT roleUser.id AS id, roleUser.user_id AS userId, roleUser.role_id AS roleId, roleUser.gmt_create AS gmtCreate, roleUser.gmt_modified AS gmtModified FROM tbl_role_user AS roleUser LEFT JOIN tbl_user AS users ON users.id = roleUser.user_id WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:44:22.467 DEBUG 29687 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==> Parameters: 2019002436(String)
+2021-03-12 21:44:22.519 DEBUG 29687 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : <==      Total: 1
+2021-03-12 21:44:22.523 DEBUG 29687 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==>  Preparing: SELECT role.id FROM tbl_role AS role WHERE role.role_name = ? LIMIT 1;
+2021-03-12 21:44:22.523 DEBUG 29687 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==> Parameters: administrator(String)
+2021-03-12 21:44:22.541 DEBUG 29687 --- [main] c.inet.code.mapper.RoleMapper.getByName  : <==      Total: 1
+2021-03-12 21:44:22.577 DEBUG 29687 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==>  Preparing: UPDATE tbl_role_user SET gmt_modified=?, role_id=?, gmt_create=?, user_id=? WHERE id=?
+2021-03-12 21:44:22.580 DEBUG 29687 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==> Parameters: 2021-03-12 21:44:22.576(Timestamp), b740691d04a8586873df4e60fb7a0948(String), 2021-03-12 21:12:24.0(Timestamp), 2d9ce23f29e608811246ded9453a6281(String), c559d92a727ac47d7b91417f322c17ee(String)
+2021-03-12 21:44:22.641 DEBUG 29687 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : <==    Updates: 1
+2021-03-12 21:50:03.380  INFO 29725 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29725 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:50:03.386 DEBUG 29725 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:50:03.389  INFO 29725 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:50:11.088  INFO 29725 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 8.465 seconds (JVM running for 10.761)
+2021-03-12 21:50:12.662 DEBUG 29725 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==>  Preparing: SELECT users.id AS userId FROM tbl_user AS users WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:50:12.703 DEBUG 29725 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==> Parameters: 2019002436(String)
+2021-03-12 21:50:12.747 DEBUG 29725 --- [main] c.i.code.mapper.UserMapper.getByNumber   : <==      Total: 1
+2021-03-12 21:50:12.752 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:50:12.753 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: agreeSignIn(String)
+2021-03-12 21:50:12.764 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:50:12.766 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:50:12.767 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: checkRanking(String)
+2021-03-12 21:50:12.779 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:50:12.781 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:50:12.781 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: monthRanking(String)
+2021-03-12 21:50:12.792 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:50:12.793 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:50:12.794 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: registered(String)
+2021-03-12 21:50:12.806 DEBUG 29725 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:50:12.879 DEBUG 29725 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==>  Preparing: INSERT INTO tbl_permissions_user ( id, gmt_modified, permissions_id, gmt_create, user_id ) VALUES ( ?, ?, ?, ?, ? )
+2021-03-12 21:50:12.914 DEBUG 29725 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 4e36a310a4014f9f2d3a3d1ed2976a97(String), 2021-03-12 21:50:12.879(Timestamp), c049075635de6f03b6e5a3a6154b3a94(String), 2021-03-12 21:50:12.879(Timestamp), 2d9ce23f29e608811246ded9453a6281(String)
+2021-03-12 21:50:12.916 DEBUG 29725 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 0fa0bb036c9d3e5c1ab39b6c6ab82349(String), 2021-03-12 21:50:12.916(Timestamp), 1b140869292353a4244b7060ffebf922(String), 2021-03-12 21:50:12.916(Timestamp), 2d9ce23f29e608811246ded9453a6281(String)
+2021-03-12 21:50:12.921 DEBUG 29725 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 4654ee7a068ce1f09905bf4dc24be3e6(String), 2021-03-12 21:50:12.918(Timestamp), a0defb2840ebeeb694b063b9027cd8bf(String), 2021-03-12 21:50:12.918(Timestamp), 2d9ce23f29e608811246ded9453a6281(String)
+2021-03-12 21:50:12.925 DEBUG 29725 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: aa356c75d3e083a9109ee90eba0e9581(String), 2021-03-12 21:50:12.923(Timestamp), 982b6d06aca872662e33f2a7714a1b54(String), 2021-03-12 21:50:12.923(Timestamp), 2d9ce23f29e608811246ded9453a6281(String)
+2021-03-12 21:52:08.389  INFO 29747 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29747 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:52:08.392 DEBUG 29747 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:52:08.395  INFO 29747 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:52:16.214  INFO 29747 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 8.651 seconds (JVM running for 11.065)
+2021-03-12 21:52:18.074 DEBUG 29747 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==>  Preparing: SELECT roleUser.id AS id, roleUser.user_id AS userId, roleUser.role_id AS roleId, roleUser.gmt_create AS gmtCreate, roleUser.gmt_modified AS gmtModified FROM tbl_role_user AS roleUser LEFT JOIN tbl_user AS users ON users.id = roleUser.user_id WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:52:18.120 DEBUG 29747 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==> Parameters: 2019002403(String)
+2021-03-12 21:52:18.179 DEBUG 29747 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : <==      Total: 1
+2021-03-12 21:52:18.183 DEBUG 29747 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==>  Preparing: SELECT role.id FROM tbl_role AS role WHERE role.role_name = ? LIMIT 1;
+2021-03-12 21:52:18.183 DEBUG 29747 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==> Parameters: administrator(String)
+2021-03-12 21:52:18.201 DEBUG 29747 --- [main] c.inet.code.mapper.RoleMapper.getByName  : <==      Total: 1
+2021-03-12 21:52:18.250 DEBUG 29747 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==>  Preparing: UPDATE tbl_role_user SET gmt_modified=?, role_id=?, gmt_create=?, user_id=? WHERE id=?
+2021-03-12 21:52:18.253 DEBUG 29747 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==> Parameters: 2021-03-12 21:52:18.249(Timestamp), b740691d04a8586873df4e60fb7a0948(String), 2021-03-09 10:56:40.0(Timestamp), 8287d054789f3419aaeb045bb2747cf8(String), 8b43045192b3dbbce65048a06c847cf5(String)
+2021-03-12 21:52:18.295 DEBUG 29747 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : <==    Updates: 1
+2021-03-12 21:52:40.039  INFO 29752 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29752 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:52:40.041 DEBUG 29752 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:52:40.044  INFO 29752 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:52:47.169  INFO 29752 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 7.936 seconds (JVM running for 10.111)
+2021-03-12 21:52:48.254 DEBUG 29752 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==>  Preparing: SELECT users.id AS userId FROM tbl_user AS users WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:52:48.284 DEBUG 29752 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==> Parameters: 2019002403(String)
+2021-03-12 21:52:48.321 DEBUG 29752 --- [main] c.i.code.mapper.UserMapper.getByNumber   : <==      Total: 1
+2021-03-12 21:52:48.326 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:52:48.327 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: agreeSignIn(String)
+2021-03-12 21:52:48.340 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:52:48.341 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:52:48.342 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: checkRanking(String)
+2021-03-12 21:52:48.354 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:52:48.356 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:52:48.357 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: monthRanking(String)
+2021-03-12 21:52:48.369 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:52:48.371 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:52:48.372 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: registered(String)
+2021-03-12 21:52:48.383 DEBUG 29752 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:52:48.437 DEBUG 29752 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==>  Preparing: INSERT INTO tbl_permissions_user ( id, gmt_modified, permissions_id, gmt_create, user_id ) VALUES ( ?, ?, ?, ?, ? )
+2021-03-12 21:52:48.440 DEBUG 29752 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: c0be97cb3966aa6a810fbaa85b648e97(String), 2021-03-12 21:52:48.436(Timestamp), c049075635de6f03b6e5a3a6154b3a94(String), 2021-03-12 21:52:48.436(Timestamp), 8287d054789f3419aaeb045bb2747cf8(String)
+2021-03-12 21:52:48.442 DEBUG 29752 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 8c4e658114c35b98cbd44285f249fdf6(String), 2021-03-12 21:52:48.441(Timestamp), 1b140869292353a4244b7060ffebf922(String), 2021-03-12 21:52:48.441(Timestamp), 8287d054789f3419aaeb045bb2747cf8(String)
+2021-03-12 21:52:48.443 DEBUG 29752 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 2638672edcfcb3552e7089313ca016ce(String), 2021-03-12 21:52:48.442(Timestamp), a0defb2840ebeeb694b063b9027cd8bf(String), 2021-03-12 21:52:48.442(Timestamp), 8287d054789f3419aaeb045bb2747cf8(String)
+2021-03-12 21:52:48.444 DEBUG 29752 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 9a772a7fd40479ee63d9d18195b15a17(String), 2021-03-12 21:52:48.443(Timestamp), 982b6d06aca872662e33f2a7714a1b54(String), 2021-03-12 21:52:48.443(Timestamp), 8287d054789f3419aaeb045bb2747cf8(String)
+2021-03-12 21:53:15.788  INFO 29760 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29760 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:53:15.790 DEBUG 29760 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:53:15.796  INFO 29760 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:53:21.962  INFO 29760 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 6.963 seconds (JVM running for 9.091)
+2021-03-12 21:53:23.103 DEBUG 29760 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==>  Preparing: SELECT roleUser.id AS id, roleUser.user_id AS userId, roleUser.role_id AS roleId, roleUser.gmt_create AS gmtCreate, roleUser.gmt_modified AS gmtModified FROM tbl_role_user AS roleUser LEFT JOIN tbl_user AS users ON users.id = roleUser.user_id WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:53:23.140 DEBUG 29760 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==> Parameters: 2019002210(String)
+2021-03-12 21:53:23.195 DEBUG 29760 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : <==      Total: 1
+2021-03-12 21:53:23.200 DEBUG 29760 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==>  Preparing: SELECT role.id FROM tbl_role AS role WHERE role.role_name = ? LIMIT 1;
+2021-03-12 21:53:23.201 DEBUG 29760 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==> Parameters: administrator(String)
+2021-03-12 21:53:23.217 DEBUG 29760 --- [main] c.inet.code.mapper.RoleMapper.getByName  : <==      Total: 1
+2021-03-12 21:53:23.242 DEBUG 29760 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==>  Preparing: UPDATE tbl_role_user SET gmt_modified=?, role_id=?, gmt_create=?, user_id=? WHERE id=?
+2021-03-12 21:53:23.244 DEBUG 29760 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==> Parameters: 2021-03-12 21:53:23.24(Timestamp), b740691d04a8586873df4e60fb7a0948(String), 2021-03-12 21:14:06.0(Timestamp), 6b7924532fbfadece2bdb7088539fcee(String), e127dae7dbb73a10f82443f882383c36(String)
+2021-03-12 21:53:23.281 DEBUG 29760 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : <==    Updates: 1
+2021-03-12 21:53:31.413  INFO 29769 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29769 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:53:31.419 DEBUG 29769 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:53:31.427  INFO 29769 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:53:37.669  INFO 29769 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 7.119 seconds (JVM running for 9.175)
+2021-03-12 21:53:38.899 DEBUG 29769 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==>  Preparing: SELECT users.id AS userId FROM tbl_user AS users WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:53:38.931 DEBUG 29769 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==> Parameters: 2019002210(String)
+2021-03-12 21:53:39.000 DEBUG 29769 --- [main] c.i.code.mapper.UserMapper.getByNumber   : <==      Total: 1
+2021-03-12 21:53:39.005 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:53:39.006 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: agreeSignIn(String)
+2021-03-12 21:53:39.048 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:53:39.061 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:53:39.062 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: checkRanking(String)
+2021-03-12 21:53:39.072 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:53:39.074 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:53:39.075 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: monthRanking(String)
+2021-03-12 21:53:39.086 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:53:39.087 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:53:39.087 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: registered(String)
+2021-03-12 21:53:39.121 DEBUG 29769 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:53:39.198 DEBUG 29769 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==>  Preparing: INSERT INTO tbl_permissions_user ( id, gmt_modified, permissions_id, gmt_create, user_id ) VALUES ( ?, ?, ?, ?, ? )
+2021-03-12 21:53:39.201 DEBUG 29769 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 91eff336d68207b54cc386ac03ff1d2b(String), 2021-03-12 21:53:39.197(Timestamp), c049075635de6f03b6e5a3a6154b3a94(String), 2021-03-12 21:53:39.197(Timestamp), 6b7924532fbfadece2bdb7088539fcee(String)
+2021-03-12 21:53:39.203 DEBUG 29769 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 4d276425e346d217727166037fcdcc18(String), 2021-03-12 21:53:39.202(Timestamp), 1b140869292353a4244b7060ffebf922(String), 2021-03-12 21:53:39.202(Timestamp), 6b7924532fbfadece2bdb7088539fcee(String)
+2021-03-12 21:53:39.204 DEBUG 29769 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: ac94bfb224faf0a9947d5d736abf8e33(String), 2021-03-12 21:53:39.204(Timestamp), a0defb2840ebeeb694b063b9027cd8bf(String), 2021-03-12 21:53:39.204(Timestamp), 6b7924532fbfadece2bdb7088539fcee(String)
+2021-03-12 21:53:39.206 DEBUG 29769 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 0e4947d23be87c274ba27f634a0b4caf(String), 2021-03-12 21:53:39.205(Timestamp), 982b6d06aca872662e33f2a7714a1b54(String), 2021-03-12 21:53:39.205(Timestamp), 6b7924532fbfadece2bdb7088539fcee(String)
+2021-03-12 21:54:04.496  INFO 29774 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29774 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:54:04.498 DEBUG 29774 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:54:04.503  INFO 29774 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:54:13.188  INFO 29774 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 9.476 seconds (JVM running for 11.685)
+2021-03-12 21:54:14.769 DEBUG 29774 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==>  Preparing: SELECT roleUser.id AS id, roleUser.user_id AS userId, roleUser.role_id AS roleId, roleUser.gmt_create AS gmtCreate, roleUser.gmt_modified AS gmtModified FROM tbl_role_user AS roleUser LEFT JOIN tbl_user AS users ON users.id = roleUser.user_id WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:54:14.825 DEBUG 29774 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==> Parameters: 2019002405(String)
+2021-03-12 21:54:14.877 DEBUG 29774 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : <==      Total: 1
+2021-03-12 21:54:14.882 DEBUG 29774 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==>  Preparing: SELECT role.id FROM tbl_role AS role WHERE role.role_name = ? LIMIT 1;
+2021-03-12 21:54:14.882 DEBUG 29774 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==> Parameters: administrator(String)
+2021-03-12 21:54:14.896 DEBUG 29774 --- [main] c.inet.code.mapper.RoleMapper.getByName  : <==      Total: 1
+2021-03-12 21:54:14.930 DEBUG 29774 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==>  Preparing: UPDATE tbl_role_user SET gmt_modified=?, role_id=?, gmt_create=?, user_id=? WHERE id=?
+2021-03-12 21:54:14.933 DEBUG 29774 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==> Parameters: 2021-03-12 21:54:14.929(Timestamp), b740691d04a8586873df4e60fb7a0948(String), 2021-03-10 16:56:58.0(Timestamp), a67bbd628488f47e3297916f78068158(String), 1bc4b0c468cae12319693d84d046f3b3(String)
+2021-03-12 21:54:14.971 DEBUG 29774 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : <==    Updates: 1
+2021-03-12 21:54:22.914  INFO 29778 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29778 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 21:54:22.918 DEBUG 29778 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 21:54:22.921  INFO 29778 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 21:54:30.583  INFO 29778 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 8.512 seconds (JVM running for 10.804)
+2021-03-12 21:54:31.907 DEBUG 29778 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==>  Preparing: SELECT users.id AS userId FROM tbl_user AS users WHERE users.`number` = ? LIMIT 1;
+2021-03-12 21:54:31.951 DEBUG 29778 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==> Parameters: 2019002405(String)
+2021-03-12 21:54:31.996 DEBUG 29778 --- [main] c.i.code.mapper.UserMapper.getByNumber   : <==      Total: 1
+2021-03-12 21:54:32.001 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:54:32.002 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: agreeSignIn(String)
+2021-03-12 21:54:32.017 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:54:32.020 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:54:32.021 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: checkRanking(String)
+2021-03-12 21:54:32.035 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:54:32.037 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:54:32.038 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: monthRanking(String)
+2021-03-12 21:54:32.055 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:54:32.057 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 21:54:32.057 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: registered(String)
+2021-03-12 21:54:32.070 DEBUG 29778 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 21:54:32.155 DEBUG 29778 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==>  Preparing: INSERT INTO tbl_permissions_user ( id, gmt_modified, permissions_id, gmt_create, user_id ) VALUES ( ?, ?, ?, ?, ? )
+2021-03-12 21:54:32.161 DEBUG 29778 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 7d8a94be17d220e615f1fe978e4659e0(String), 2021-03-12 21:54:32.154(Timestamp), c049075635de6f03b6e5a3a6154b3a94(String), 2021-03-12 21:54:32.154(Timestamp), a67bbd628488f47e3297916f78068158(String)
+2021-03-12 21:54:32.163 DEBUG 29778 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 4381b4d46504b174cf4f8ce0ad0438ba(String), 2021-03-12 21:54:32.162(Timestamp), 1b140869292353a4244b7060ffebf922(String), 2021-03-12 21:54:32.162(Timestamp), a67bbd628488f47e3297916f78068158(String)
+2021-03-12 21:54:32.164 DEBUG 29778 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 14d46aecaafcbd18d8499ebbd43b2d7e(String), 2021-03-12 21:54:32.164(Timestamp), a0defb2840ebeeb694b063b9027cd8bf(String), 2021-03-12 21:54:32.164(Timestamp), a67bbd628488f47e3297916f78068158(String)
+2021-03-12 21:54:32.168 DEBUG 29778 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: c840af19432fbd84393a57b70c89b4bb(String), 2021-03-12 21:54:32.165(Timestamp), 982b6d06aca872662e33f2a7714a1b54(String), 2021-03-12 21:54:32.165(Timestamp), a67bbd628488f47e3297916f78068158(String)
+2021-03-12 22:40:07.951  INFO 29884 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29884 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 22:40:07.954 DEBUG 29884 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 22:40:07.957  INFO 29884 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 22:40:16.571  INFO 29884 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 9.485 seconds (JVM running for 12.307)
+2021-03-12 22:40:18.882 DEBUG 29884 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==>  Preparing: SELECT roleUser.id AS id, roleUser.user_id AS userId, roleUser.role_id AS roleId, roleUser.gmt_create AS gmtCreate, roleUser.gmt_modified AS gmtModified FROM tbl_role_user AS roleUser LEFT JOIN tbl_user AS users ON users.id = roleUser.user_id WHERE users.`number` = ? LIMIT 1;
+2021-03-12 22:40:18.926 DEBUG 29884 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : ==> Parameters: 2020002331(String)
+2021-03-12 22:40:19.293 DEBUG 29884 --- [main] c.i.c.m.RoleUserMapper.selectByUserId    : <==      Total: 1
+2021-03-12 22:40:19.297 DEBUG 29884 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==>  Preparing: SELECT role.id FROM tbl_role AS role WHERE role.role_name = ? LIMIT 1;
+2021-03-12 22:40:19.297 DEBUG 29884 --- [main] c.inet.code.mapper.RoleMapper.getByName  : ==> Parameters: administrator(String)
+2021-03-12 22:40:19.632 DEBUG 29884 --- [main] c.inet.code.mapper.RoleMapper.getByName  : <==      Total: 1
+2021-03-12 22:40:19.684 DEBUG 29884 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==>  Preparing: UPDATE tbl_role_user SET gmt_modified=?, role_id=?, gmt_create=?, user_id=? WHERE id=?
+2021-03-12 22:40:19.687 DEBUG 29884 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : ==> Parameters: 2021-03-12 22:40:19.683(Timestamp), b740691d04a8586873df4e60fb7a0948(String), 2021-03-12 21:55:56.0(Timestamp), 3cbb2f48e2d0f57c8c3de7e58ead2dae(String), dc2dcee7f7fb3e4a91df77fe3cd5e670(String)
+2021-03-12 22:40:19.761 DEBUG 29884 --- [main] c.i.c.mapper.RoleUserMapper.updateById   : <==    Updates: 1
+2021-03-12 22:40:28.797  INFO 29889 --- [main] com.inet.InetApplicationTests            : Starting InetApplicationTests using Java 15.0.1 on huchengyedeMBP.lan with PID 29889 (started by huchengye in /Volumes/1/JAVA/spring-boot-inet-apple)
+2021-03-12 22:40:28.798 DEBUG 29889 --- [main] com.inet.InetApplicationTests            : Running with Spring Boot v2.4.0, Spring v5.3.1
+2021-03-12 22:40:28.801  INFO 29889 --- [main] com.inet.InetApplicationTests            : No active profile set, falling back to default profiles: default
+2021-03-12 22:40:36.259  INFO 29889 --- [main] com.inet.InetApplicationTests            : Started InetApplicationTests in 8.346 seconds (JVM running for 10.766)
+2021-03-12 22:40:37.559 DEBUG 29889 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==>  Preparing: SELECT users.id AS userId FROM tbl_user AS users WHERE users.`number` = ? LIMIT 1;
+2021-03-12 22:40:37.626 DEBUG 29889 --- [main] c.i.code.mapper.UserMapper.getByNumber   : ==> Parameters: 2020002331(String)
+2021-03-12 22:40:37.664 DEBUG 29889 --- [main] c.i.code.mapper.UserMapper.getByNumber   : <==      Total: 1
+2021-03-12 22:40:37.668 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 22:40:37.669 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: agreeSignIn(String)
+2021-03-12 22:40:37.680 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 22:40:37.681 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 22:40:37.682 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: checkRanking(String)
+2021-03-12 22:40:37.693 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 22:40:37.694 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 22:40:37.695 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: monthRanking(String)
+2021-03-12 22:40:37.706 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 22:40:37.707 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==>  Preparing: SELECT permissions.id FROM tbl_permissions AS permissions WHERE permissions.permissions_name = ? LIMIT 1;
+2021-03-12 22:40:37.708 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : ==> Parameters: registered(String)
+2021-03-12 22:40:37.718 DEBUG 29889 --- [main] c.i.c.m.PermissionsMapper.getByName      : <==      Total: 1
+2021-03-12 22:40:37.815 DEBUG 29889 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==>  Preparing: INSERT INTO tbl_permissions_user ( id, gmt_modified, permissions_id, gmt_create, user_id ) VALUES ( ?, ?, ?, ?, ? )
+2021-03-12 22:40:37.821 DEBUG 29889 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 2d1d27585b383a76c8b7b7c0bd480da7(String), 2021-03-12 22:40:37.813(Timestamp), c049075635de6f03b6e5a3a6154b3a94(String), 2021-03-12 22:40:37.813(Timestamp), 3cbb2f48e2d0f57c8c3de7e58ead2dae(String)
+2021-03-12 22:40:37.823 DEBUG 29889 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 6c1461b5133a3768eb71325305ddc357(String), 2021-03-12 22:40:37.822(Timestamp), 1b140869292353a4244b7060ffebf922(String), 2021-03-12 22:40:37.822(Timestamp), 3cbb2f48e2d0f57c8c3de7e58ead2dae(String)
+2021-03-12 22:40:37.826 DEBUG 29889 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: 618397f9cd21ee61be9dd07b9ed09344(String), 2021-03-12 22:40:37.825(Timestamp), a0defb2840ebeeb694b063b9027cd8bf(String), 2021-03-12 22:40:37.825(Timestamp), 3cbb2f48e2d0f57c8c3de7e58ead2dae(String)
+2021-03-12 22:40:37.833 DEBUG 29889 --- [main] c.i.c.m.PermissionsUserMapper.insert     : ==> Parameters: a118c017e07aba50c419034ed49ae8ee(String), 2021-03-12 22:40:37.828(Timestamp), 982b6d06aca872662e33f2a7714a1b54(String), 2021-03-12 22:40:37.828(Timestamp), 3cbb2f48e2d0f57c8c3de7e58ead2dae(String)

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.code.mapper.CheckMapper">
+
+    <!--通过用户序号判断用户的签到状态-->
+    <select id="getJudgeStateByUserId" resultType="java.lang.Integer">
+        SELECT
+            checks.checkState
+        FROM tbl_check AS checks
+        WHERE checks.user_id = #{userId}
+        LIMIT 1;
+    </select>
+    <!--通过用户序号查找到签到实体类-->
+    <select id="getByUserId" resultType="com.inet.code.entity.po.Check">
+        SELECT
+            checks.id AS id,
+            checks.user_id AS id,
+            checks.checkState AS checkState,
+            checks.startTime AS startTime,
+            checks.endTime AS endTime,
+            checks.checkTotal AS checkTotal,
+            checks.gmt_create AS gmtCreate,
+            checks.gmt_modified AS gmtModified
+        FROM
+            tbl_check AS checks
+        WHERE
+            checks.user_id = #{userId}
+            LIMIT 1;
+    </select>
+
+    <select id="getCheckingProgress" resultType="com.inet.code.entity.vo.CheckIng">
+        SELECT
+            users.id AS userId,
+            users.`name` AS `name`,
+            users.`number` AS `number`,
+            (case checks.checkState
+                 WHEN 0 THEN '未签到'
+                 WHEN 1 THEN '签到未同意'
+                 WHEN 2 THEN '签到中'
+                END
+            ) AS state
+        FROM tbl_check AS checks
+        LEFT JOIN tbl_user AS users ON users.id = checks.user_id
+        WHERE
+            checks.checkState = #{state}
+    </select>
+
+    <select id="showRankings" resultType="com.inet.code.entity.vo.Ranking">
+        SELECT
+            users.id AS userId,
+            users.`name` AS userName,
+            users.`number` AS userNumber,
+            checks.checkTotal AS checkTotal
+        FROM tbl_check AS checks
+        LEFT JOIN tbl_user AS users ON checks.user_id = users.id
+        ORDER BY checks.checkTotal DESC
+    </select>
+</mapper>

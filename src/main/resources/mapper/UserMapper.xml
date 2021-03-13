@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.code.mapper.UserMapper">
+    <!--通过用户序号查找用户的全部信息-->
+    <select id="getByUserId" resultType="com.inet.code.entity.vo.AllUserInfo">
+        SELECT
+            users.id AS id,
+            users.`number` AS `number`,
+            users.`name` AS `name`,
+            users.portrait AS portrait,
+            users.club AS club,
+            users.telephone AS telephone,
+            roles.role_name AS roleName
+        FROM tbl_user AS users
+            LEFT JOIN tbl_role_user AS roleUser ON roleUser.user_id = users.id
+            LEFT JOIN tbl_role AS roles ON roles.id = roleUser.role_id
+        WHERE users.id = #{userId} LIMIT 1;
+    </select>
+    <!--通过用户序号获取权限集合-->
+    <select id="getPermissionsList" resultType="com.inet.code.entity.vo.PermissionsInfo">
+        SELECT
+            permissionsUser.id AS id,
+            permissions.permissions_name AS permissionsName
+        FROM tbl_user AS users
+                 LEFT JOIN tbl_permissions_user AS permissionsUser ON users.id = permissionsUser.user_id
+                 LEFT JOIN tbl_permissions AS permissions ON permissionsUser.permissions_id = permissions.id
+        WHERE users.id = #{userId};
+    </select>
+    <!--通过学号查询用户的主键-->
+    <select id="getByNumber" resultType="java.lang.String">
+        SELECT
+            users.id AS userId
+        FROM tbl_user AS users
+        WHERE users.`number` = #{number} LIMIT 1;
+    </select>
+    <!--通过学号判断是否重复-->
+    <select id="getIsNumber" resultType="java.lang.Integer">
+        SELECT
+            COUNT(*)
+        FROM tbl_user AS users
+        WHERE
+            users.`number` = #{number}
+        LIMIT 1;
+    </select>
+    <!--登陆操作-->
+    <select id="getLogin" resultType="java.lang.String">
+        SELECT
+            users.id
+        FROM tbl_user AS users
+                 LEFT JOIN tbl_cipher AS ciphers ON users.id = ciphers.user_id
+        WHERE users.number = #{account} AND ciphers.`cipher` = #{password}
+            LIMIT 1;
+    </select>
+
+</mapper>

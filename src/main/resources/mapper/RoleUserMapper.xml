@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inet.code.mapper.RoleUserMapper">
+
+    <select id="selectByUserId" resultType="com.inet.code.entity.po.RoleUser">
+        SELECT
+            roleUser.id AS id,
+            roleUser.user_id AS userId,
+            roleUser.role_id AS roleId,
+            roleUser.gmt_create AS gmtCreate,
+            roleUser.gmt_modified AS gmtModified
+        FROM tbl_role_user AS roleUser
+                 LEFT JOIN tbl_user AS users ON users.id = roleUser.user_id
+        WHERE users.`number` = #{userId}
+        LIMIT 1;
+    </select>
+</mapper>
